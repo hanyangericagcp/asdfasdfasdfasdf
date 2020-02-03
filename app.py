@@ -15,7 +15,7 @@ def hello():
 
 @app.route('/about')
 def about():
-    return "여기는 어바웃입니다."
+    return "this is about"
 
 
 if __name__ == '__main__':
