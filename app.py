@@ -1,20 +1,17 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-import crawling
+# import crawling
 
 
 @app.route('/')
 def hello():
 
-    myList, myList_href = crawling.daum()
-    todayhumor, todayhumor_href = crawling.today_humor()
-    clien, clien_href = crawling.clien()
+    # myList, myList_href = crawling.daum()
+    # todayhumor, todayhumor_href = crawling.today_humor()
+    # clien, clien_href = crawling.clien()
 
-    return render_template("index.html",
-                           list = myList, list_href = myList_href, list_len = len(myList),
-                           list2 = todayhumor, list2_href = todayhumor_href, list2_len = len(todayhumor),
-                           list3 = clien, list3_href = clien_href, list3_len = len(clien))
+    return render_template("asd")
 
 @app.route('/about')
 def about():

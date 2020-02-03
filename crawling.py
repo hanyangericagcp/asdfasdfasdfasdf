@@ -6,7 +6,7 @@ def daum() :
     # 엔터치기
     req = requests.get('https://www.daum.net/')
 
-    # 이런 식으로 HTML에 있는 코드를 다 가져온다
+
     soup = BeautifulSoup(req.text, 'html.parser')
 
     myList = []
