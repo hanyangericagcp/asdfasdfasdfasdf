@@ -1,22 +1,24 @@
-from flask import Flask, render_template
+# coding: utf-8
+
+from flask import Flask
+
 app = Flask(__name__)
 
-# import crawling
+import requests
+from bs4 import BeautifulSoup
 
 
 @app.route('/')
-def hello():
+def hello_world():
+    req = requests.get("https://search.naver.com/search.naver?where=news&sm=tab_jum&query=뿌우")
 
-    # myList, myList_href = crawling.daum()
-    # todayhumor, todayhumor_href = crawling.today_humor()
-    # clien, clien_href = crawling.clien()
+    soup = BeautifulSoup(req.text, 'html.parser')
 
-    return render_template("asd")
+    print(soup)
 
-@app.route('/about')
-def about():
-    return "this is about"
+
+    return 'Hello World!'
 
 
 if __name__ == '__main__':
-    app.run('0,0,0,0', port=80)
+    app.run('0.0.0.0', port=80)
