@@ -16,6 +16,8 @@ def hello_world():
 
     print(soup)
 
+    print("Test Get")
+
 
 
 
